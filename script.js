@@ -20,18 +20,22 @@ function showNature(){
   monitor.innerHTML = "Accept the force of nature";
 }
 
-naturebutton.addEventListener("click", showRandom);
+randombutton.addEventListener("click", showRandom);
 
 function showRandom(){
 let x = Math.floor(Math.random() * 3);
   if (x < 1) {
-    showNature();
+    showFire();
       
   }
-  else {
+  else if (x>1){
     showWater();
       
     }
+
+  else {
+    showNature();
+  }
     console.log(x);
   }
 
