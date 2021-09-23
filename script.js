@@ -7,6 +7,19 @@ firebutton.addEventListener("click", showFire);
 
 function showFire(){
   monitor.innerHTML = "You will burn";
+  let y = cpuRandom();
+  if (y === 0) {
+    monitor.innerHTML = "- Both burn in hell - <br>Draw";
+  
+  }
+  else if (y === 1) {
+    monitor.innerHTML = "- You are wet now - <br>Computer wins";
+  }
+  else {
+    monitor.innerHTML = "- The trees will burn - <br>You win";
+  }
+
+
 }
 waterbutton.addEventListener("click", showWater);
 
@@ -39,6 +52,34 @@ let x = Math.floor(Math.random() * 3);
     console.log(x);
   }
 
+function cpuRandom(){
+  let y = Math.floor(Math.random() * 3);
+    if (y < 1) {
+      
+      return y;
+        
+    }
+    else if (y>1){
+      
+      return y;
+        
+      }
+
+    else {
+      
+      return y;
+    }
+   
   
+
+
+}  
+
+
+function compare(){
+  if (p === y){
+    console.log("unentschieden");
+  }
+}
 
 
