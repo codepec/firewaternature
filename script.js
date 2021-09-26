@@ -2,38 +2,163 @@
 
 const monitor = document.querySelector('.monitor');
 const firebutton = document.getElementById("firebutton");
+const scorePlayer = document.getElementById("scorePlayer");
+const scoreCPU = document.getElementById("scoreCPU");
+let cpu = 0;
+let player = 0;
+const txtPlayer = document.getElementById("txtPlayer");
+const txtCPU = document.getElementById("txtCPU");
  
 firebutton.addEventListener("click", showFire);
 
 function showFire(){
   monitor.innerHTML = "You will burn";
-  let y = cpuRandom();
-  if (y === 0) {
-    monitor.innerHTML = "- Both burn in hell - <br>Draw";
+  winLooseFire();
   
-  }
-  else if (y === 1) {
-    monitor.innerHTML = "- You are wet now - <br>Computer wins";
-  }
-  else {
-    monitor.innerHTML = "- The trees will burn - <br>You win";
-  }
+  gameFinished();
+}
 
+
+function winLooseFire(){
+
+
+  // 0 = Fire
+  // 1 = Water
+  // 2 = Nature
+  let y = cpuRandom();
+    if (y === 0) {
+      monitor.innerHTML = "Draw";
+      txtPlayer.innerHTML = "Fire";
+      txtCPU.innerHTML = "Fire";
+      
+    }
+    else if (y === 1) {
+      monitor.innerHTML = "Computer wins";
+      cpu = cpu + 1;
+      scoreCPU.innerHTML = cpu;
+      txtPlayer.innerHTML = "Fire";
+      txtCPU.innerHTML = "Water";
+
+    }
+    else {
+      monitor.innerHTML = "You win";
+      player = player + 1;
+      scorePlayer.innerHTML = player;
+      txtPlayer.innerHTML = "Fire";
+      txtCPU.innerHTML = "Nature";
+    
+    }
 
 }
+
+function winLooseWater(){
+
+
+  // 0 = Fire
+  // 1 = Water
+  // 2 = Nature
+  let y = cpuRandom();
+    if (y === 0) {
+      monitor.innerHTML = "You win";
+      player = player + 1;
+      scorePlayer.innerHTML = player;
+      txtPlayer.innerHTML = "Water";
+      txtCPU.innerHTML = "Fire";
+
+    }
+    else if (y === 1) {
+      monitor.innerHTML = "Draw";
+      txtPlayer.innerHTML = "Water";
+      txtCPU.innerHTML = "Water";
+      
+    }
+    else {
+      monitor.innerHTML = "Computer wins";
+      cpu = cpu + 1;
+      scoreCPU.innerHTML = cpu;
+      txtPlayer.innerHTML = "Water";
+      txtCPU.innerHTML = "Nature";
+    
+    }
+
+}
+
+function winLooseNature(){
+
+  // 0 = Fire
+  // 1 = Water
+  // 2 = Nature
+  let y = cpuRandom();
+    if (y === 0) {
+      monitor.innerHTML = "Computer wins";
+      cpu = cpu + 1;
+      scoreCPU.innerHTML = cpu;
+      txtPlayer.innerHTML = "Nature";
+      txtCPU.innerHTML = "Fire";
+    }
+    else if (y === 1) {
+      monitor.innerHTML = "You win";
+      player = player + 1;
+      scorePlayer.innerHTML = player;
+      txtPlayer.innerHTML = "Nature";
+      txtCPU.innerHTML = "Water";
+    }
+    else {
+      monitor.innerHTML = "Draw";
+      txtPlayer.innerHTML = "Nature";
+      txtCPU.innerHTML = "Nature";
+      
+      
+    
+    }
+
+}
+
+
+function gameFinished() {
+  if (cpu === 3) {
+    monitor.innerHTML = "Game Over"
+    firebutton.disabled = true;
+    waterbutton.disabled = true;
+    naturebutton.disabled = true;
+    randombutton.disabled = true;
+
+  }
+
+  else if (player === 3) {
+  monitor.innerHTML = "You Win"
+  firebutton.disabled = true;
+  waterbutton.disabled = true;
+  naturebutton.disabled = true;
+  randombutton.disabled = true;
+  }
+
+  else {
+
+  }
+}
+
+
+
 waterbutton.addEventListener("click", showWater);
 
 function showWater(){
   monitor.innerHTML = "The wave is coming";
+  winLooseWater()
+  gameFinished();
 }
 
 naturebutton.addEventListener("click", showNature);
 
 function showNature(){
   monitor.innerHTML = "Accept the force of nature";
+  winLooseNature();
+  gameFinished();
 }
 
 randombutton.addEventListener("click", showRandom);
+
+gameFinished();
 
 function showRandom(){
 let x = Math.floor(Math.random() * 3);

@@ -1,20 +1,134 @@
-.monitor {
+body{
+    background:linear-gradient(#82978c75, #262b28c5);
+}
 
+h1 {
+    margin: 0;
+    padding: 0;
+  
+    color:gray;
+    text-shadow: 1px 1px 2px black;
+    font-size: 50px;
+    text-align: left;
+}
+
+p{
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    color:gray;
+}
+
+.monitor {
     width: 200px;
     height: 50px;
     padding:150px;
     border-radius: 15px;
-    background-color: aquamarine;
+    background-color: rgb(176, 204, 150);
+    border: 1px solid;
+    font-size: 40px;
 }
 
-.button {
+.monitorSmall {
+    border-radius: 15px;
+
+    font-size: 30px;
+    background: linear-gradient(#adbbb375, #cfdfd7c5);
+}
+
+.monitorText {
+    width: 30px;
+    height: 50px;
+    padding: 20px;
+    border-radius: 15px;
+    font-size: 25px;
+    margin: 15px;
+}
+
+table{
+    width: 50%;
+    table-layout: fixed;
+}
+
+td{
+    width: 50%;
+    text-align: center;
+}
+
+
+
+button {
+    text-decoration: none;
     padding: 25px;
     border-radius: 15px;
+    border: none;
+    background-color: wheat;
+    cursor: pointer;
+    margin: 5px;
+    width: 100px;
+    height: 80px;
+    font-size: 15px;
+
 }
 
+button:hover {
+    box-shadow: 0px 0px 5px 0px;
+}
+
+
+#firebutton{
+    background-color: lightcoral;
+}
+#firebutton:hover{
+    background: linear-gradient(#e66465, #e9c26e);
+    
+}
+
+#waterbutton{
+    background-color: lightskyblue;
+}
+#waterbutton:hover{
+    background: linear-gradient(#697ad8, #6ebce9);
+}
+
+#naturebutton{
+    background-color: lightgreen;
+}
+#naturebutton:hover{
+    background: linear-gradient(#2b7918, #7cc439);
+
+}
+#randombutton{
+
+    background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+            linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+            linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+
+
+}
+
+
+
+
 .middle {
-    margin-top: 20px;
+    margin-top: 10px;
     display:flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
+
+
+footer{
+    
+    background-color: rgb(165, 167, 172);
+    text-align: center;
+    font-size: 15px;
+    color: rgba(4,9,30,0.8);
+    
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+
