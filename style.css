@@ -109,24 +109,7 @@ button:hover {
 
 }
 
-#waterkillsfire{
 
-background: rgb(219,75,75);
-background: linear-gradient(90deg, rgba(219,75,75,1) 0%, rgba(233,194,110,1) 30%, rgba(110,188,233,1) 70%, rgba(49,67,165,1) 100%); 
-}
-
-#firekillsnature{
-
-background: rgb(219,75,75);
-background: linear-gradient(90deg, rgba(219,75,75,1) 0%, rgba(233,194,110,1) 30%, rgba(141,221,67,1) 70%, rgba(43,121,24,1) 100%); 
-}
-
-#firedraw{
-    
-    background: rgb(219,75,75);
-    background: linear-gradient(90deg, rgba(219,75,75,1) 0%, rgba(233,194,110,1) 30%, rgba(233,194,110,1) 70%, rgba(219,75,75,1) 100%); 
-
-}
 
 
 
@@ -150,9 +133,7 @@ background: linear-gradient(90deg, rgba(219,75,75,1) 0%, rgba(233,194,110,1) 30%
     border-radius: 15px;
     border: 1px solid;
 
-    background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
-    linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
-    linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+    background-color: rgb(202, 202, 202);
 
 }
 

@@ -31,8 +31,10 @@ function winLooseFire(){
       monitor.innerHTML = "Draw";
       txtPlayer.innerHTML = "Fire";
       txtCPU.innerHTML = "Fire";
-      box.style.background = "linear-gradient(90deg, rgba(219,75,75,1) 0%, rgba(233,194,110,1) 30%, rgba(110,188,233,1) 70%, rgba(49,67,165,1) 100%)";
       
+      
+      box.style.background = "linear-gradient(90deg, rgba(219,75,75,1) 0%, rgba(233,194,110,1) 30%, rgba(233,194,110,1) 70%, rgba(219,75,75,1) 100%)";
+
     }
     else if (y === 1) {
       monitor.innerHTML = "Computer wins";
@@ -41,6 +43,8 @@ function winLooseFire(){
       txtPlayer.innerHTML = "Fire";
       txtCPU.innerHTML = "Water";
 
+      box.style.background = "linear-gradient(90deg, rgba(219,75,75,1) 0%, rgba(233,194,110,1) 30%, rgba(110,188,233,1) 70%, rgba(49,67,165,1) 100%)";
+
     }
     else {
       monitor.innerHTML = "You win";
@@ -48,6 +52,8 @@ function winLooseFire(){
       scorePlayer.innerHTML = player;
       txtPlayer.innerHTML = "Fire";
       txtCPU.innerHTML = "Nature";
+
+      box.style.background = "linear-gradient(90deg, rgba(219,75,75,1) 0%, rgba(233,194,110,1) 30%, rgba(141,221,67,1) 70%, rgba(43,121,24,1) 100%)";
     
     }
 
@@ -66,12 +72,14 @@ function winLooseWater(){
       scorePlayer.innerHTML = player;
       txtPlayer.innerHTML = "Water";
       txtCPU.innerHTML = "Fire";
-
+      box.style.background = "linear-gradient(90deg, rgba(49,67,165,1) 0%, rgba(110,188,233,1) 30%, rgba(233,194,110,1) 70%, rgba(219,75,75,1) 100%)";
     }
     else if (y === 1) {
       monitor.innerHTML = "Draw";
       txtPlayer.innerHTML = "Water";
       txtCPU.innerHTML = "Water";
+
+      box.style.background = "linear-gradient(90deg, rgba(49,67,165,1) 0%, rgba(110,188,233,1) 30%, rgba(110,188,233,1) 70%, rgba(49,67,165,1) 100%)";
       
     }
     else {
@@ -81,6 +89,8 @@ function winLooseWater(){
       txtPlayer.innerHTML = "Water";
       txtCPU.innerHTML = "Nature";
     
+      box.style.background = "linear-gradient(90deg, rgba(49,67,165,1) 0%, rgba(110,188,233,1) 30%, rgba(141,221,67,1) 70%, rgba(43,121,24,1) 100%)";
+
     }
 
 }
@@ -97,6 +107,8 @@ function winLooseNature(){
       scoreCPU.innerHTML = cpu;
       txtPlayer.innerHTML = "Nature";
       txtCPU.innerHTML = "Fire";
+      box.style.background = "linear-gradient(90deg, rgba(43,121,24,1) 0%, rgba(141,221,67,1) 30%, rgba(233,194,110,1) 70%, rgba(219,75,75,1) 100%)";
+
     }
     else if (y === 1) {
       monitor.innerHTML = "You win";
@@ -104,11 +116,16 @@ function winLooseNature(){
       scorePlayer.innerHTML = player;
       txtPlayer.innerHTML = "Nature";
       txtCPU.innerHTML = "Water";
+
+      box.style.background = "linear-gradient(90deg, rgba(43,121,24,1) 0%, rgba(141,221,67,1) 30%, rgba(110,188,233,1) 70%, rgba(49,67,165,1) 100%)";
+
+
     }
     else {
       monitor.innerHTML = "Draw";
       txtPlayer.innerHTML = "Nature";
       txtCPU.innerHTML = "Nature";
+      box.style.background = "linear-gradient(90deg, rgba(43,121,24,1) 0%, rgba(141,221,67,1) 30%, rgba(141,221,67,1) 70%, rgba(43,121,24,1) 100%)";
       
       
     
