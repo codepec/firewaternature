@@ -20,11 +20,21 @@ p{
 }
 
 .monitor {
-    width: 200px;
+    width: 400px;
     height: 50px;
-    padding:150px;
+    padding:30px;
     border-radius: 15px;
-    background-color: rgb(176, 204, 150);
+    background-color: rgb(202, 202, 202);
+    border: 1px solid;
+    font-size: 40px;
+}
+
+.monitor3 {
+    width: 400px;
+    height: 50px;
+    padding:30px;
+    border-radius: 15px;
+    background-color: rgb(202, 202, 202);
     border: 1px solid;
     font-size: 40px;
 }
@@ -37,21 +47,19 @@ p{
 }
 
 .monitorText {
-    width: 30px;
-    height: 50px;
-    padding: 20px;
+ 
     border-radius: 15px;
     font-size: 25px;
-    margin: 15px;
+
 }
 
 table{
-    width: 50%;
+    width: 100%;
     table-layout: fixed;
 }
 
 td{
-    width: 50%;
+    width: 100%;
     text-align: center;
 }
 
@@ -62,7 +70,7 @@ button {
     padding: 25px;
     border-radius: 15px;
     border: none;
-    background-color: wheat;
+   
     cursor: pointer;
     margin: 5px;
     width: 100px;
@@ -77,27 +85,21 @@ button:hover {
 
 
 #firebutton{
-    background-color: lightcoral;
-}
-#firebutton:hover{
-    background: linear-gradient(#e66465, #e9c26e);
+
+    background: linear-gradient(#db4b4b, #e9c26e);
     
 }
 
 #waterbutton{
-    background-color: lightskyblue;
-}
-#waterbutton:hover{
-    background: linear-gradient(#697ad8, #6ebce9);
+
+    background: linear-gradient(#3143a5, #6ebce9);
 }
 
 #naturebutton{
-    background-color: lightgreen;
+    
+    background: linear-gradient(#2b7918, #8ddd43);
 }
-#naturebutton:hover{
-    background: linear-gradient(#2b7918, #7cc439);
 
-}
 #randombutton{
 
     background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
@@ -107,6 +109,24 @@ button:hover {
 
 }
 
+#waterkillsfire{
+
+background: rgb(219,75,75);
+background: linear-gradient(90deg, rgba(219,75,75,1) 0%, rgba(233,194,110,1) 30%, rgba(110,188,233,1) 70%, rgba(49,67,165,1) 100%); 
+}
+
+#firekillsnature{
+
+background: rgb(219,75,75);
+background: linear-gradient(90deg, rgba(219,75,75,1) 0%, rgba(233,194,110,1) 30%, rgba(141,221,67,1) 70%, rgba(43,121,24,1) 100%); 
+}
+
+#firedraw{
+    
+    background: rgb(219,75,75);
+    background: linear-gradient(90deg, rgba(219,75,75,1) 0%, rgba(233,194,110,1) 30%, rgba(233,194,110,1) 70%, rgba(219,75,75,1) 100%); 
+
+}
 
 
 
@@ -118,10 +138,28 @@ button:hover {
     text-align: center;
 }
 
+.box {
+  
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 400px;
+    
+    padding:30px;
+    border-radius: 15px;
+    border: 1px solid;
+
+    background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+    linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+    linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+
+}
+
 
 footer{
     
-    background-color: rgb(165, 167, 172);
+    
     text-align: center;
     font-size: 15px;
     color: rgba(4,9,30,0.8);

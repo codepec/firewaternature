@@ -8,6 +8,7 @@ let cpu = 0;
 let player = 0;
 const txtPlayer = document.getElementById("txtPlayer");
 const txtCPU = document.getElementById("txtCPU");
+const box = document.querySelector('.box');
  
 firebutton.addEventListener("click", showFire);
 
@@ -30,6 +31,7 @@ function winLooseFire(){
       monitor.innerHTML = "Draw";
       txtPlayer.innerHTML = "Fire";
       txtCPU.innerHTML = "Fire";
+      box.style.background = "linear-gradient(90deg, rgba(219,75,75,1) 0%, rgba(233,194,110,1) 30%, rgba(110,188,233,1) 70%, rgba(49,67,165,1) 100%)";
       
     }
     else if (y === 1) {
