@@ -36,6 +36,7 @@ function winLooseFire(){
   let y = cpuRandom();
     if (y === 0) {
       monitor.innerHTML = "Draw";
+      monitor.style.color = "black";
       txtPlayer.innerHTML = "Fire";
       txtCPU.innerHTML = "Fire";
       
@@ -45,6 +46,7 @@ function winLooseFire(){
     }
     else if (y === 1) {
       monitor.innerHTML = "Computer wins";
+      monitor.style.color = "red";
       cpu = cpu + 1;
       scoreCPU.innerHTML = cpu;
       txtPlayer.innerHTML = "Fire";
@@ -55,6 +57,7 @@ function winLooseFire(){
     }
     else {
       monitor.innerHTML = "You win";
+      monitor.style.color = "green";
       player = player + 1;
       scorePlayer.innerHTML = player;
       txtPlayer.innerHTML = "Fire";
@@ -75,6 +78,7 @@ function winLooseWater(){
   let y = cpuRandom();
     if (y === 0) {
       monitor.innerHTML = "You win";
+      monitor.style.color = "green";
       player = player + 1;
       scorePlayer.innerHTML = player;
       txtPlayer.innerHTML = "Water";
@@ -83,6 +87,7 @@ function winLooseWater(){
     }
     else if (y === 1) {
       monitor.innerHTML = "Draw";
+      monitor.style.color = "black";
       txtPlayer.innerHTML = "Water";
       txtCPU.innerHTML = "Water";
 
@@ -91,6 +96,7 @@ function winLooseWater(){
     }
     else {
       monitor.innerHTML = "Computer wins";
+      monitor.style.color = "red";
       cpu = cpu + 1;
       scoreCPU.innerHTML = cpu;
       txtPlayer.innerHTML = "Water";
@@ -110,6 +116,7 @@ function winLooseNature(){
   let y = cpuRandom();
     if (y === 0) {
       monitor.innerHTML = "Computer wins";
+      monitor.style.color = "red";
       cpu = cpu + 1;
       scoreCPU.innerHTML = cpu;
       txtPlayer.innerHTML = "Nature";
@@ -119,6 +126,7 @@ function winLooseNature(){
     }
     else if (y === 1) {
       monitor.innerHTML = "You win";
+      monitor.style.color = "green";
       player = player + 1;
       scorePlayer.innerHTML = player;
       txtPlayer.innerHTML = "Nature";
@@ -130,6 +138,7 @@ function winLooseNature(){
     }
     else {
       monitor.innerHTML = "Draw";
+      monitor.style.color = "black";
       txtPlayer.innerHTML = "Nature";
       txtCPU.innerHTML = "Nature";
       box.style.background = "linear-gradient(90deg, rgba(43,121,24,1) 0%, rgba(141,221,67,1) 30%, rgba(141,221,67,1) 70%, rgba(43,121,24,1) 100%)";
@@ -142,8 +151,9 @@ function winLooseNature(){
 
 
 function gameFinished() {
-  if (cpu === 3) {
+  if (cpu === 5) {
     monitor.innerHTML = "Game Over"
+    monitor.style.color = "red";
     firebutton.disabled = true;
     waterbutton.disabled = true;
     naturebutton.disabled = true;
@@ -151,8 +161,9 @@ function gameFinished() {
 
   }
 
-  else if (player === 3) {
-  monitor.innerHTML = "You Win"
+  else if (player === 5) {
+  monitor.innerHTML = "You win"
+  monitor.style.color = "green";
   firebutton.disabled = true;
   waterbutton.disabled = true;
   naturebutton.disabled = true;
