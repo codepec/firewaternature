@@ -14,11 +14,18 @@ firebutton.addEventListener("click", showFire);
 
 function showFire(){
   monitor.innerHTML = "You will burn";
+  
   winLooseFire();
   
   gameFinished();
 }
 
+function startCoundown(){
+  
+  monitor.style.transition = "5s";
+  monitor.innerHTML = "You will burn";
+
+}
 
 function winLooseFire(){
 
@@ -34,7 +41,7 @@ function winLooseFire(){
       
       
       box.style.background = "linear-gradient(90deg, rgba(219,75,75,1) 0%, rgba(233,194,110,1) 30%, rgba(233,194,110,1) 70%, rgba(219,75,75,1) 100%)";
-
+   
     }
     else if (y === 1) {
       monitor.innerHTML = "Computer wins";
