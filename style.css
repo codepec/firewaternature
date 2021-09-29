@@ -67,6 +67,13 @@ button {
     box-shadow: 2px 2px 4px 1px;
     cursor: pointer;
     background:linear-gradient(to bottom, #f24437 5%, #91170c 100%);
+    color:black;
+    
+}
+
+button:active {
+   
+    color:black;
     
 }
 
