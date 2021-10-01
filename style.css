@@ -151,4 +151,21 @@ footer{
     width: 100%;
 }
 
+#reset {
+    background: gray;
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px solid;
+    cursor: pointer;
+}
+
+#reset:hover {
+    background-color: rgb(202, 202, 202);
+}
+
+#resetP {
+    color:black;
+    font-size: 15px;
+}
+
 
