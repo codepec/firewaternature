@@ -1,15 +1,19 @@
-
-
-const monitor = document.querySelector('.monitor');
-const firebutton = document.getElementById("firebutton");
-const scorePlayer = document.getElementById("scorePlayer");
-const scoreCPU = document.getElementById("scoreCPU");
 let cpu = 0;
 let player = 0;
-const txtPlayer = document.getElementById("txtPlayer");
-const txtCPU = document.getElementById("txtCPU");
-const box = document.querySelector('.box');
+
+//const monitor = document.querySelector('.monitor');
+//const firebutton = document.getElementById("firebutton");
+//const scorePlayer = document.getElementById("scorePlayer");
+//const scoreCPU = document.getElementById("scoreCPU");
+//const txtPlayer = document.getElementById("txtPlayer");
+//const txtCPU = document.getElementById("txtCPU");
+//const box = document.querySelector('.box');
  
+window.onload = function() {
+  monitor = document.querySelector('.monitor');
+  box = document.querySelector('.box');
+}
+
 firebutton.addEventListener("click", showFire);
 
 function showFire(){
@@ -170,6 +174,8 @@ function gameFinished() {
   randombutton.disabled = true;
   }
 
+
+
   else {
 
   }
@@ -211,7 +217,7 @@ let x = Math.floor(Math.random() * 3);
   else {
     showNature();
   }
-    console.log(x);
+   
   }
 
 function cpuRandom(){
@@ -238,10 +244,21 @@ function cpuRandom(){
 }  
 
 
-function compare(){
-  if (p === y){
-    console.log("unentschieden");
-  }
-}
+reset.addEventListener("click", setZero);
 
+function setZero() {
+  monitor.innerHTML = "try as hard as one can";
+  monitor.style.color = "black";
+  txtPlayer.innerHTML = "-";
+  txtCPU.innerHTML = "-";
+  box.style.background = "rgb(202, 202, 202)";
+  cpu = 0;
+  player = 0;
+  scoreCPU.innerHTML = cpu;
+  scorePlayer.innerHTML = player;
+  firebutton.disabled = false;
+  waterbutton.disabled = false;
+  naturebutton.disabled = false;
+  randombutton.disabled = false;
+}
 
