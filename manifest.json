@@ -1,10 +1,10 @@
 {
     "name": "FireWaterNature",
-    "short_name": "FWN",
+    "short_name": "FireWaterNature",
     "theme_color": "#2196f3",
     "background_color": "#2196f3",
     "display": "fullscreen",
     "orientation": "portrait",
     "scope": "/",
-    "start_url": "/"
+    "start_url": "https://codepec.github.io/firewaternature/"
   }
