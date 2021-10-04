@@ -172,10 +172,12 @@ function winLooseNature(){
 }
 
 
+
+
 function gameFinished() {
   
   if (cpu === 5) {
-    monitor.innerHTML = "GAME OVER<br>You loose"
+    monitor.innerHTML = "GAME OVER<br>You loose<br>" + "Try again"
     monitor.style.color = "red";
     firebutton.disabled = true;
     waterbutton.disabled = true;
@@ -183,11 +185,11 @@ function gameFinished() {
     randombutton.disabled = true;
     points = 0;
     rounds++;
-    
+    monitor.addEventListener("click", setZero);
   }
 
   else if (player === 5) {
-    monitor.innerHTML = "WINNER<br>You win"
+    monitor.innerHTML = "WINNER<br>You win<br>" + "Try again"
     monitor.style.color = "green";
     firebutton.disabled = true;
     waterbutton.disabled = true;
@@ -195,6 +197,8 @@ function gameFinished() {
     randombutton.disabled = true;
     points++;
     rounds++;
+    monitor.addEventListener("click", setZero);
+
   }
 
 
@@ -203,6 +207,7 @@ function gameFinished() {
 
   }
   saveScore();
+  
 }
 
 

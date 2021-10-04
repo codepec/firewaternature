@@ -67,6 +67,16 @@ td{
 
 button {
    
+    background: gray;
+   
+    border-radius: 5px;
+    border: 1px solid;
+    cursor: pointer;
+    
+}
+
+.bigButton {
+   
     height: 100px;
     width: 100px;
     border-radius: 50%;
@@ -79,7 +89,7 @@ button {
     
 }
 
-button:active {
+.bigButton:active {
    
     color:black;
     
