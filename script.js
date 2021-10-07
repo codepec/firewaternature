@@ -30,7 +30,7 @@ function inputPlayerName(){
 
     if (playerName != null) {
       monitor.innerText =
-      "Hello " + playerName + "<br>Don't f*ck it up.";
+      "Hello " + playerName + "\nDon't f*ck it up.";
     } 
   }
 
@@ -59,7 +59,7 @@ function winLooseFire(){
   // 2 = Nature
   let y = cpuRandom();
     if (y === 0) {
-      monitor.innerText = "Fire beats Fire<br>Draw";
+      monitor.innerText = "Fire beats Fire\nDraw";
       monitor.style.color = "black";
       txtPlayer.innerText = "Fire";
       txtCPU.innerText = "Fire";
@@ -69,7 +69,7 @@ function winLooseFire(){
    
     }
     else if (y === 1) {
-      monitor.innerText = "Water beats Fire<br>Computer wins";
+      monitor.innerText = "Water beats Fire\nComputer wins";
       monitor.style.color = "red";
       cpu = cpu + 1;
       scoreCPU.innerText = cpu;
@@ -80,7 +80,7 @@ function winLooseFire(){
 
     }
     else {
-      monitor.innerText = "Fire beats Nature<br>You win";
+      monitor.innerText = "Fire beats Nature\nYou win";
       monitor.style.color = "green";
       player = player + 1;
       scorePlayer.innerText = player;
@@ -101,7 +101,7 @@ function winLooseWater(){
   // 2 = Nature
   let y = cpuRandom();
     if (y === 0) {
-      monitor.innerText = "Water beats Fire<br>You win";
+      monitor.innerText = "Water beats Fire\nYou win";
       monitor.style.cssText = "color:green; box-shadow: 0px;";
       player = player + 1;
       scorePlayer.innerText = player;
@@ -110,7 +110,7 @@ function winLooseWater(){
       box.style.background = "linear-gradient(90deg, rgba(49,67,165,1) 0%, rgba(110,188,233,1) 30%, rgba(233,194,110,1) 70%, rgba(219,75,75,1) 100%)";
     }
     else if (y === 1) {
-      monitor.innerText = "Water beats Water<br>Draw";
+      monitor.innerText = "Water beats Water\nDraw";
       monitor.style.cssText = "color:black; box-shadow: 0px;";
       txtPlayer.innerText = "Water";
       txtCPU.innerText = "Water";
@@ -119,7 +119,7 @@ function winLooseWater(){
       
     }
     else {
-      monitor.innerText = "Nature beats Water<br>Computer wins";
+      monitor.innerText = "Nature beats Water\nComputer wins";
       monitor.style.cssText = "color:red; box-shadow: 0px;";
       cpu = cpu + 1;
       scoreCPU.innerText = cpu;
@@ -139,7 +139,7 @@ function winLooseNature(){
   // 2 = Nature
   let y = cpuRandom();
     if (y === 0) {
-      monitor.innerText = "Fire beats Nature<br>Computer wins";
+      monitor.innerText = "Fire beats Nature\nComputer wins";
       monitor.style.cssText = "color:red; box-shadow: 0px;";
       cpu = cpu + 1;
       scoreCPU.innerText = cpu;
@@ -149,7 +149,7 @@ function winLooseNature(){
 
     }
     else if (y === 1) {
-      monitor.innerText = "Nature beats Water<br>You win";
+      monitor.innerText = "Nature beats Water\nYou win";
       monitor.style.cssText = "color:green; box-shadow: 0px;";
       player = player + 1;
       scorePlayer.innerText = player;
@@ -161,7 +161,7 @@ function winLooseNature(){
 
     }
     else {
-      monitor.innerText = "Nature beats Nature<br>Draw";
+      monitor.innerText = "Nature beats Nature\nDraw";
       monitor.style.cssText = "color:black; box-shadow: 0px;";
       txtPlayer.innerText = "Nature";
       txtCPU.innerText = "Nature";
@@ -175,11 +175,12 @@ function winLooseNature(){
 
 
 
+buttonNewGame.addEventListener("click", setZero);
 
 function gameFinished() {
   
   if (cpu === 5) {
-    monitor.innerText = "GAME OVER<br>" + "Try again"
+    monitor.innerText = "GAME OVER\n" + "Try again"
     
     firebutton.disabled = true;
     waterbutton.disabled = true;
@@ -193,7 +194,7 @@ function gameFinished() {
   }
 
   else if (player === 5) {
-    monitor.innerText = "WINNER<br>" + "Try again"
+    monitor.innerText = "WINNER\n" + "Try again"
     
     firebutton.disabled = true;
     waterbutton.disabled = true;
@@ -283,13 +284,14 @@ function cpuRandom(){
 reset.addEventListener("click", setZero);
 
 function setZero() {
-  monitor.innerText = "Round: " + rounds + "<br>" + "Points: " + points;
+  monitor.innerText = "Round: " + rounds + "\n" + "Points: " + points;
   monitor.style.cssText = "color:black; box-shadow: 0px;";
   txtPlayer.innerText = "-";
   txtCPU.innerText = "-";
   box.style.background = "rgb(202, 202, 202)";
   cpu = 0;
   player = 0;
+
   scoreCPU.innerText = cpu;
   scorePlayer.innerText = player;
   firebutton.disabled = false;
@@ -348,6 +350,10 @@ function gameScoring() {
   else if (points === 3) {
     monitor.innerText = "You win the game";
     monitor.style.cssText = "box-shadow: inset 0px 0px 30px 20px green;";
+    firebutton.disabled = true;
+    waterbutton.disabled = true;
+    naturebutton.disabled = true;
+    randombutton.disabled = true;
   }
 
   else if (points === -1) {
@@ -363,6 +369,10 @@ function gameScoring() {
   else if (points === -3) {
     monitor.innerText = "You've lost the game";
     monitor.style.cssText = "box-shadow: inset 0px 0px 30px 20px red;";
+    firebutton.disabled = true;
+    waterbutton.disabled = true;
+    naturebutton.disabled = true;
+    randombutton.disabled = true;
   }
 
 
