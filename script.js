@@ -44,12 +44,7 @@ window.onload = function() {
     gameFinished();
   }
   
-  function startCoundown(){
-    
-    monitor.style.transition = "5s";
-    monitor.innerText = "You will burn";
-  
-  }
+
   
   function winLooseFire(){
   
@@ -173,9 +168,9 @@ window.onload = function() {
   
   }
   
+ 
   
-  
-  buttonNewGame.addEventListener("click", setZero);
+ 
   
   function gameFinished() {
     
@@ -280,8 +275,45 @@ window.onload = function() {
   
   }  
   
+  buttonHelp.addEventListener("click", alertHelp);
+
+  function alertHelp(){
+    alert(" Fire beats Nature \n Water beats Fire \n Nature beats Water");
+  }
   
-  reset.addEventListener("click", setZero);
+  buttonNewGame.addEventListener("click", setReset);
+
+  reset.addEventListener("click", setReset);
+
+
+function setReset() {
+
+  cpu = 0;
+  player = 0;
+  rounds = 0;
+  points = 0;
+  monitor.innerText = "Round: " + rounds + "\n" + "Points: " + points;
+  monitor.style.cssText = "color:black; box-shadow: 0px;";
+  txtPlayer.innerText = "-";
+  txtCPU.innerText = "-";
+  box.style.background = "rgb(202, 202, 202)";
+
+  scoreCPU.innerText = cpu;
+  scorePlayer.innerText = player;
+  firebutton.disabled = false;
+  waterbutton.disabled = false;
+  naturebutton.disabled = false;
+  randombutton.disabled = false;
+  gameScoring();
+
+
+  return;
+
+
+
+}
+
+reset.addEventListener("click", setZero);
   
   function setZero() {
     monitor.innerText = "Round: " + rounds + "\n" + "Points: " + points;
