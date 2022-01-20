@@ -7,13 +7,13 @@ h1 {
     margin: 0;
     padding: 0;
   
-    color:#a5a5a5;
+    color:rgb(201, 73, 73);
 
     
-    background: #a5a5a5;
-    background: -webkit-linear-gradient(to right, #7e7e7e 0%, #a5a5a5 10%, #ffffff 40%, #ffffff 60%, #b1b1b1 70%, #919191 100%);
-    background: -moz-linear-gradient(to right, #7e7e7e 0%, #a5a5a5 10%, #ffffff 40%, #ffffff 60%, #b1b1b1 70%, #919191 100%);
-    background: linear-gradient(to right, #7e7e7e 0%, #a5a5a5 10%, #ffffff 40%, #ffffff 60%, #b1b1b1 70%, #919191 100%);
+    background: #DB4B4B;
+    background: -webkit-linear-gradient(to right, #DB4B4B 0%, #E9C26E 10%, #6EBCE9 40%, #4555ac 60%, #8DDD43 70%, #2B7918 100%);
+    background: -moz-linear-gradient(to right, #DB4B4B 0%, #E9C26E 10%, #6EBCE9 40%, #4555ac 60%, #8DDD43 70%, #2B7918 100%);
+    background: linear-gradient(to right, #DB4B4B 0%, #E9C26E 10%, #6EBCE9 40%, #4555ac 60%, #8DDD43 70%, #2B7918 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -36,7 +36,7 @@ p{
     margin: 5px;
     box-shadow: 2px 2px 4px 1px;
     cursor: pointer;
-    background:linear-gradient(to bottom, rgb(255, 242, 172) 0%,rgb(158, 158, 158) 100%);
+    background:linear-gradient(to bottom, rgb(255, 242, 172) 0%,rgb(255, 217, 0) 100%);
     color:black;
     
 }
@@ -103,7 +103,7 @@ button {
     margin: 5px;
     box-shadow: 2px 2px 4px 1px;
     cursor: pointer;
-    background:linear-gradient(to bottom, rgb(230, 230, 230) 5%, #086499 100%);
+    background:linear-gradient(to bottom, #f24437 5%, #91170c 100%);
     color:black;
     
 }
@@ -122,21 +122,20 @@ button:hover {
 }
 
 
-#rockbutton:hover{
+#firebutton:hover{
 
-    background: linear-gradient(#f3f3f3, #616161);
-    
+    background: linear-gradient(#db4b4b, #e9c26e);
     
 }
 
-#paperbutton:hover{
+#waterbutton:hover{
 
-    background: linear-gradient(#ffffff, #e7e7e7);
+    background: linear-gradient(#3143a5, #6ebce9);
 }
 
-#scissorsbutton:hover{
+#naturebutton:hover{
     
-    background: linear-gradient(#a8a8a8, #a8a8a8);
+    background: linear-gradient(#2b7918, #8ddd43);
 }
 
 #randombutton:hover{
@@ -200,4 +199,3 @@ footer{
 .buttonGray:hover {
     background-color: rgb(202, 202, 202);
 }
-
