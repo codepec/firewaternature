@@ -175,7 +175,7 @@ function winLooseNature(){
 
 
 
-buttonNewGame.addEventListener("click", setZero);
+buttonNewGame.addEventListener("click", setReset);
 
 function gameFinished() {
   
@@ -281,7 +281,36 @@ function cpuRandom(){
 }  
 
 
-reset.addEventListener("click", setZero);
+reset.addEventListener("click", setReset);
+
+
+function setReset() {
+
+  cpu = 0;
+  player = 0;
+  rounds = 0;
+  points = 0;
+  monitor.innerText = "Round: " + rounds + "\n" + "Points: " + points;
+  monitor.style.cssText = "color:black; box-shadow: 0px;";
+  txtPlayer.innerText = "-";
+  txtCPU.innerText = "-";
+  box.style.background = "rgb(202, 202, 202)";
+
+  scoreCPU.innerText = cpu;
+  scorePlayer.innerText = player;
+  firebutton.disabled = false;
+  waterbutton.disabled = false;
+  naturebutton.disabled = false;
+  randombutton.disabled = false;
+  gameScoring();
+
+
+  return;
+
+
+
+}
+
 
 function setZero() {
   monitor.innerText = "Round: " + rounds + "\n" + "Points: " + points;
@@ -354,6 +383,9 @@ function gameScoring() {
     waterbutton.disabled = true;
     naturebutton.disabled = true;
     randombutton.disabled = true;
+
+    
+    
   }
 
   else if (points === -1) {
@@ -373,6 +405,9 @@ function gameScoring() {
     waterbutton.disabled = true;
     naturebutton.disabled = true;
     randombutton.disabled = true;
+  
+    
+    
   }
 
 
@@ -383,19 +418,6 @@ function gameScoring() {
   
   
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
