@@ -8,7 +8,7 @@ let level = 1;
 let playerName = "unknown";
 
 //const monitor = document.querySelector('.monitor');
-//const firebutton = document.getElementById("firebutton");
+//const rockbutton = document.getElementById("rockbutton");
 //const scorePlayer = document.getElementById("scorePlayer");
 //const scoreCPU = document.getElementById("scoreCPU");
 //const txtPlayer = document.getElementById("txtPlayer");
@@ -34,12 +34,12 @@ function inputPlayerName(){
     } 
   }
 
-firebutton.addEventListener("click", showFire);
+rockbutton.addEventListener("click", showRock);
 
-function showFire(){
+function showRock(){
   monitor.innerText = "You will burn";
   
-  winLooseFire();
+  winLooseRock();
   
   gameFinished();
 }
@@ -51,121 +51,121 @@ function startCoundown(){
 
 }
 
-function winLooseFire(){
+function winLooseRock(){
 
 
-  // 0 = Fire
-  // 1 = Water
-  // 2 = Nature
+  // 0 = Rock
+  // 1 = Paper
+  // 2 = Scissors
   let y = cpuRandom();
     if (y === 0) {
-      monitor.innerText = "Fire beats Fire\nDraw";
+      monitor.innerText = "Rock beats Rock\nDraw";
       monitor.style.color = "black";
-      txtPlayer.innerText = "Fire";
-      txtCPU.innerText = "Fire";
+      txtPlayer.innerText = "Rock";
+      txtCPU.innerText = "Rock";
       
       
-      box.style.background = "linear-gradient(90deg, rgba(219,75,75,1) 0%, rgba(233,194,110,1) 30%, rgba(233,194,110,1) 70%, rgba(219,75,75,1) 100%)";
+      box.style.background = "linear-gradient(90deg, rgb(135, 165, 52) 0%, rgb(181, 219, 75) 30%, rgb(181, 219, 75) 70%, rgb(135, 165, 52) 100%)";
    
     }
     else if (y === 1) {
-      monitor.innerText = "Water beats Fire\nComputer wins";
+      monitor.innerText = "Paper beats Rock\nComputer wins";
       monitor.style.color = "red";
       cpu = cpu + 1;
       scoreCPU.innerText = cpu;
-      txtPlayer.innerText = "Fire";
-      txtCPU.innerText = "Water";
+      txtPlayer.innerText = "Rock";
+      txtCPU.innerText = "Paper";
 
-      box.style.background = "linear-gradient(90deg, rgba(219,75,75,1) 0%, rgba(233,194,110,1) 30%, rgba(110,188,233,1) 70%, rgba(49,67,165,1) 100%)";
+      box.style.background = "linear-gradient(90deg, rgb(192, 23, 23) 0%, rgb(236, 48, 48) 30%, rgb(108, 236, 48) 70%, rgb(77, 192, 23) 100%)";
 
     }
     else {
-      monitor.innerText = "Fire beats Nature\nYou win";
+      monitor.innerText = "Rock beats Scissors\nYou win";
       monitor.style.color = "green";
       player = player + 1;
       scorePlayer.innerText = player;
-      txtPlayer.innerText = "Fire";
-      txtCPU.innerText = "Nature";
+      txtPlayer.innerText = "Rock";
+      txtCPU.innerText = "Scissors";
 
-      box.style.background = "linear-gradient(90deg, rgba(219,75,75,1) 0%, rgba(233,194,110,1) 30%, rgba(141,221,67,1) 70%, rgba(43,121,24,1) 100%)";
+      box.style.background = "linear-gradient(90deg, rgb(77, 192, 23) 0%, rgb(108, 236, 48) 30%, rgb(236, 48, 48) 70%, rgb(192, 23, 23) 100%)";
     
     }
 
 }
 
-function winLooseWater(){
+function winLoosePaper(){
 
 
-  // 0 = Fire
-  // 1 = Water
-  // 2 = Nature
+  // 0 = Rock
+  // 1 = Paper
+  // 2 = Scissors
   let y = cpuRandom();
     if (y === 0) {
-      monitor.innerText = "Water beats Fire\nYou win";
+      monitor.innerText = "Paper beats Rock\nYou win";
       monitor.style.cssText = "color:green; box-shadow: 0px;";
       player = player + 1;
       scorePlayer.innerText = player;
-      txtPlayer.innerText = "Water";
-      txtCPU.innerText = "Fire";
-      box.style.background = "linear-gradient(90deg, rgba(49,67,165,1) 0%, rgba(110,188,233,1) 30%, rgba(233,194,110,1) 70%, rgba(219,75,75,1) 100%)";
+      txtPlayer.innerText = "Paper";
+      txtCPU.innerText = "Rock";
+      box.style.background = "linear-gradient(90deg, rgb(77, 192, 23) 0%, rgb(108, 236, 48) 30%, rgb(236, 48, 48) 70%, rgb(192, 23, 23) 100%)";
     }
     else if (y === 1) {
-      monitor.innerText = "Water beats Water\nDraw";
+      monitor.innerText = "Paper beats Paper\nDraw";
       monitor.style.cssText = "color:black; box-shadow: 0px;";
-      txtPlayer.innerText = "Water";
-      txtCPU.innerText = "Water";
+      txtPlayer.innerText = "Paper";
+      txtCPU.innerText = "Paper";
 
-      box.style.background = "linear-gradient(90deg, rgba(49,67,165,1) 0%, rgba(110,188,233,1) 30%, rgba(110,188,233,1) 70%, rgba(49,67,165,1) 100%)";
+      box.style.background = "linear-gradient(90deg, rgb(135, 165, 52) 0%, rgb(181, 219, 75) 30%, rgb(181, 219, 75) 70%, rgb(135, 165, 52) 100%)";
       
     }
     else {
-      monitor.innerText = "Nature beats Water\nComputer wins";
+      monitor.innerText = "Scissors beats Paper\nComputer wins";
       monitor.style.cssText = "color:red; box-shadow: 0px;";
       cpu = cpu + 1;
       scoreCPU.innerText = cpu;
-      txtPlayer.innerText = "Water";
-      txtCPU.innerText = "Nature";
+      txtPlayer.innerText = "Paper";
+      txtCPU.innerText = "Scissors";
     
-      box.style.background = "linear-gradient(90deg, rgba(49,67,165,1) 0%, rgba(110,188,233,1) 30%, rgba(141,221,67,1) 70%, rgba(43,121,24,1) 100%)";
+      box.style.background = "linear-gradient(90deg, rgb(192, 23, 23) 0%, rgb(236, 48, 48) 30%, rgb(108, 236, 48) 70%, rgb(77, 192, 23) 100%)";
 
     }
 
 }
 
-function winLooseNature(){
+function winLooseScissors(){
 
-  // 0 = Fire
-  // 1 = Water
-  // 2 = Nature
+  // 0 = Rock
+  // 1 = Paper
+  // 2 = Scissors
   let y = cpuRandom();
     if (y === 0) {
-      monitor.innerText = "Fire beats Nature\nComputer wins";
+      monitor.innerText = "Rock beats Scissors\nComputer wins";
       monitor.style.cssText = "color:red; box-shadow: 0px;";
       cpu = cpu + 1;
       scoreCPU.innerText = cpu;
-      txtPlayer.innerText = "Nature";
-      txtCPU.innerText = "Fire";
-      box.style.background = "linear-gradient(90deg, rgba(43,121,24,1) 0%, rgba(141,221,67,1) 30%, rgba(233,194,110,1) 70%, rgba(219,75,75,1) 100%)";
+      txtPlayer.innerText = "Scissors";
+      txtCPU.innerText = "Rock";
+      box.style.background = "linear-gradient(90deg, rgb(192, 23, 23) 0%, rgb(236, 48, 48) 30%, rgb(108, 236, 48) 70%, rgb(77, 192, 23) 100%)";
 
     }
     else if (y === 1) {
-      monitor.innerText = "Nature beats Water\nYou win";
+      monitor.innerText = "Scissors beats Paper\nYou win";
       monitor.style.cssText = "color:green; box-shadow: 0px;";
       player = player + 1;
       scorePlayer.innerText = player;
-      txtPlayer.innerText = "Nature";
-      txtCPU.innerText = "Water";
+      txtPlayer.innerText = "Scissors";
+      txtCPU.innerText = "Paper";
 
-      box.style.background = "linear-gradient(90deg, rgba(43,121,24,1) 0%, rgba(141,221,67,1) 30%, rgba(110,188,233,1) 70%, rgba(49,67,165,1) 100%)";
+      box.style.background = "linear-gradient(90deg, rgb(77, 192, 23) 0%, rgb(108, 236, 48) 30%, rgb(236, 48, 48) 70%, rgb(192, 23, 23) 100%)";
 
 
     }
     else {
-      monitor.innerText = "Nature beats Nature\nDraw";
+      monitor.innerText = "Scissors beats Scissors\nDraw";
       monitor.style.cssText = "color:black; box-shadow: 0px;";
-      txtPlayer.innerText = "Nature";
-      txtCPU.innerText = "Nature";
-      box.style.background = "linear-gradient(90deg, rgba(43,121,24,1) 0%, rgba(141,221,67,1) 30%, rgba(141,221,67,1) 70%, rgba(43,121,24,1) 100%)";
+      txtPlayer.innerText = "Scissors";
+      txtCPU.innerText = "Scissors";
+      box.style.background = "linear-gradient(90deg, rgb(135, 165, 52) 0%, rgb(181, 219, 75) 30%, rgb(181, 219, 75) 70%, rgb(135, 165, 52) 100%)";
       
       
     
@@ -182,9 +182,9 @@ function gameFinished() {
   if (cpu === 5) {
     monitor.innerText = "GAME OVER\n" + "Try again"
     
-    firebutton.disabled = true;
-    waterbutton.disabled = true;
-    naturebutton.disabled = true;
+    rockbutton.disabled = true;
+    paperbutton.disabled = true;
+    scissorsbutton.disabled = true;
     randombutton.disabled = true;
     points--;
     rounds++;
@@ -196,9 +196,9 @@ function gameFinished() {
   else if (player === 5) {
     monitor.innerText = "WINNER\n" + "Try again"
     
-    firebutton.disabled = true;
-    waterbutton.disabled = true;
-    naturebutton.disabled = true;
+    rockbutton.disabled = true;
+    paperbutton.disabled = true;
+    scissorsbutton.disabled = true;
     randombutton.disabled = true;
     points++;
     rounds++;
@@ -220,19 +220,19 @@ function gameFinished() {
 
 
 
-waterbutton.addEventListener("click", showWater);
+paperbutton.addEventListener("click", showPaper);
 
-function showWater(){
+function showPaper(){
   monitor.innerText = "The wave is coming";
-  winLooseWater()
+  winLoosePaper()
   gameFinished();
 }
 
-naturebutton.addEventListener("click", showNature);
+scissorsbutton.addEventListener("click", showScissors);
 
-function showNature(){
-  monitor.innerText = "Accept the force of nature";
-  winLooseNature();
+function showScissors(){
+  monitor.innerText = "Accept the force of scissors";
+  winLooseScissors();
   gameFinished();
 }
 
@@ -243,16 +243,16 @@ gameFinished();
 function showRandom(){
 let x = Math.floor(Math.random() * 3);
   if (x < 1) {
-    showFire();
+    showRock();
       
   }
   else if (x>1){
-    showWater();
+    showPaper();
       
     }
 
   else {
-    showNature();
+    showScissors();
   }
    
   }
@@ -298,9 +298,9 @@ function setReset() {
 
   scoreCPU.innerText = cpu;
   scorePlayer.innerText = player;
-  firebutton.disabled = false;
-  waterbutton.disabled = false;
-  naturebutton.disabled = false;
+  rockbutton.disabled = false;
+  paperbutton.disabled = false;
+  scissorsbutton.disabled = false;
   randombutton.disabled = false;
   gameScoring();
 
@@ -323,9 +323,9 @@ function setZero() {
 
   scoreCPU.innerText = cpu;
   scorePlayer.innerText = player;
-  firebutton.disabled = false;
-  waterbutton.disabled = false;
-  naturebutton.disabled = false;
+  rockbutton.disabled = false;
+  paperbutton.disabled = false;
+  scissorsbutton.disabled = false;
   randombutton.disabled = false;
   gameScoring();
 
@@ -379,9 +379,9 @@ function gameScoring() {
   else if (points === 3) {
     monitor.innerText = "You win the game";
     monitor.style.cssText = "box-shadow: inset 0px 0px 30px 20px green;";
-    firebutton.disabled = true;
-    waterbutton.disabled = true;
-    naturebutton.disabled = true;
+    rockbutton.disabled = true;
+    paperbutton.disabled = true;
+    scissorsbutton.disabled = true;
     randombutton.disabled = true;
 
     
@@ -401,9 +401,9 @@ function gameScoring() {
   else if (points === -3) {
     monitor.innerText = "You've lost the game";
     monitor.style.cssText = "box-shadow: inset 0px 0px 30px 20px red;";
-    firebutton.disabled = true;
-    waterbutton.disabled = true;
-    naturebutton.disabled = true;
+    rockbutton.disabled = true;
+    paperbutton.disabled = true;
+    scissorsbutton.disabled = true;
     randombutton.disabled = true;
   
     

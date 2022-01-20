@@ -1,12 +1,12 @@
 {
-    "name": "FireWaterNature",
-    "short_name": "FiWaNa",
+    "name": "RockPaperScissors",
+    "short_name": "RoPaSc",
     "theme_color": "#2196f3",
     "background_color": "#2196f3",
     "display": "fullscreen",
     "orientation": "portrait",
     "scope": "/",
-    "start_url": "https://codepec.github.io/firewaternature/",
+    "start_url": "https://codepec.github.io/theodinproject/rockpaperscissors",
     "icons": [
       {
         "src": "images/icons/icon-72x72.png",
